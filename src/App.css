@@ -1,38 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap');
+
 .App {
   text-align: center;
+  font-family: 'Roboto', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.toolbar-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.toolbar-filter {
+  width: fit-content;
+  padding: 4px 10px;
+  border: 1px solid #505050;
+  cursor: pointer;
+  transition: color 1s ease-in-out;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.toolbar-filter:hover {
+  background-color: black;
+  color: chocolate;
+}
+
+.toolbar-filter:nth-of-type(n+2) {
+  margin-left: 2px;
+}
+
+.project-img {
+  width: 32%;
+  margin-bottom: 5px;
+}
+
+.project-img:last-of-type {
+  margin-bottom: 0;
+}
+
+.project-img img {
+  display: block;
+  width: 100%;
+}
+
+.projects-list {
+  list-style: none;
+  padding: 0;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  width: 80%;
+  max-height: 2400px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: auto;
+}
+
+.selected {
+  background-color: black;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
